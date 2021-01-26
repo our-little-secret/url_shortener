@@ -1,0 +1,94 @@
+/* This file is for your main application css. */
+@import "./phoenix.css";
+
+/* Alerts and form errors */
+.alert {
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+}
+.alert-info {
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-warning {
+  color: #8a6d3b;
+  background-color: #fcf8e3;
+  border-color: #faebcc;
+}
+.alert-danger {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+.alert p {
+  margin-bottom: 0;
+}
+.alert:empty {
+  display: none;
+}
+
+$purple: #a54eda;
+$red: #da4e4e;
+
+body {
+  margin-top: 150px;
+  text-align: center;
+}
+
+.header-text {
+  color: $purple;
+  font-weight: 900;
+  font-size: 7rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.url-text {
+  color: $purple;
+  font-weight: 900;
+  font-size: 7rem;
+  letter-spacing: 1px;
+}
+
+.submit-button {
+  background-color: $purple !important;
+  border-color: $purple !important;
+  font-size: 3rem !important;
+  height: 46px !important;
+  width: 100% !important;
+}
+
+.reset-button {
+  background-color: $purple !important;
+  border-color: $purple !important;
+}
+
+.red {
+  background-color: $red;
+  border-color: $red;
+}
+
+.button-extra-large {
+  height: 55px !important;
+  font-size: 28px;
+  padding-top: 10px;
+  font-size: 30px;
+  width: 370px;
+}
+
+label {
+  text-align: left;
+  color: $purple;
+}
+
+.error {
+  color: $red;
+}
+
+input[type="url"] {
+  height: 43px;
+  font-size: 15px;
+}

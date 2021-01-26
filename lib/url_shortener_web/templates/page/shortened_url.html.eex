@@ -1,0 +1,1 @@
+<x-shortened-url-page encodedSlug=<%= @encoded_slug %>></x-shortened-url-page>

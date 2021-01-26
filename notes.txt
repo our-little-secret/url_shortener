@@ -1,0 +1,36 @@
+# Required Dependencies
+Docker Desktop
+
+# Run/Use App
+docker-compose build
+docker-compose up
+docker-compose exec web mix ecto.setup
+
+- navigate to localhost:4000
+- enter url to shorten
+- try out shortened url
+- try out shortened URl that doesn't exist (observe server logs for helpful dev logs)
+- try out valid base62 slug/shortened URL > than 12 characters, observe result/logs
+
+# Run Tests
+docker-compose exec web mix test
+
+# Assumptions Made
+
+
+## What I would have done given more time
+- So many more tests!
+  - more unit tests (as it is mostly just integration tests right now)
+  - Tests for the context
+- Mock out call to :inet.gethostbyname() so tests are isolated
+- property based tests to really exercise parts of system that take input from outside world to hammer system and uncover new bugs
+- Refactored Encoder and Decoder to be more resilient and handle more situations and return something other than just :ok, this was a compromise that would be good to talk about
+- Would not have used remount
+- Add Credo
+- Actually run dialyzer to confirm my specs were correct
+- Added docs where it makes sense and @doc false where it doesn't
+- Coveralls to check test coverage
+- Followed a style doc
+- Done a code review with one or two colleagues
+- Actual performance analysis with something like Benchee and make tweaks where needed
+- used better form validation and tightened it down to only allow http(s) schemes (as is only errors out)
